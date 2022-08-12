@@ -26,7 +26,6 @@
       background: #ffc600;
       filter: blur(10px);
     }
-
     body {
       text-align: center;
       background: #193549;
@@ -49,10 +48,10 @@
 let a  = document.querySelector("#blur")
 document.onmousemove = () => {
   document.querySelector("img").style.padding = spacing.value+"px"
-  document.querySelector("img").style.filter = "blur"+"("+(a.value+"px")+")"
+  document.querySelector("img").style.filter = `blur(${a.value}px)`
 }
 base.onchange = function (){
-  document.querySelector("img").style.background =base.value
+  document.querySelector("img").style.background = base.value
 }
   </script>
 

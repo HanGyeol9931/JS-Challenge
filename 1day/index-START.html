@@ -6,8 +6,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -83,8 +81,8 @@ let kbd= document.querySelectorAll("kbd").length
 console.log(kbd)
 for (let i = 0; i < kbd; i++) {
   document.onkeydown = function(e){
-    console.log('dssdfds')
     const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+    console.log(audio)
     document.querySelector(`.key[data-key="${e.keyCode}"]`).classList.add("playing")
     audio.play();
     audio.currentTime = 0;
@@ -92,7 +90,7 @@ for (let i = 0; i < kbd; i++) {
   document.onkeyup = (e)=>{
     document.querySelector(`.key[data-key="${e.keyCode}"]`).classList.remove("playing")
   }
-}a
+}
 // 반복문 돌리고 안에
 // 키 다운 키업 둘다 넣고 
 

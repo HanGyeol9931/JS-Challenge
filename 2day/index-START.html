@@ -82,10 +82,10 @@
       let mm = day.getMinutes() * 6 + 90;
       let ss = day.getSeconds()* 6 + 90;
 
-      hourHand.style.transform = `rotate(${(hh + mm/12)}deg)`;
+      hourHand.style.transform = `rotate(${(hh)+(mm/30)}deg)`;
       minHand.style.transform = `rotate(${mm}deg)`;
       secondHand.style.transform = `rotate(${ss}deg)`;
-    },1000)
+    },1200)
 
   </script>
 </body>
